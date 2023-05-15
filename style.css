@@ -31,10 +31,10 @@ body {
   gap: .9rem;
 }
 
-@media screen and (orientation: landscape) and (max-width: 85rem) and (max-height: 55rem) {
-  .container{
-    top: 15vh; /* The 35vh part is height / 2  */
-    left: calc(50vh - 35vh);
+@media screen and (orientation: landscape) {
+  .container {
+    top: 15vh;
+    left: calc(50vw - 35vh); /* The 35vh part is height / 2  */
     width: 70vh;
     height: 70vh;
   }
