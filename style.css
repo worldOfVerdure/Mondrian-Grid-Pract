@@ -1,0 +1,32 @@
+/* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  top: calc(50vh - 35vw); /* The 35vw part is width / 2  */
+  left: 15vw;
+  width: 70vw;
+  height: 70vw;
+  background-color: #000;
+  display: grid;
+  gap: .9rem;
+}
