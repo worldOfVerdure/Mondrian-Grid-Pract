@@ -30,3 +30,12 @@ body {
   display: grid;
   gap: .9rem;
 }
+
+@media screen and (orientation: landscape) and (max-width: 85rem) and (max-height: 55rem) {
+  .container{
+    top: 15vh; /* The 35vh part is height / 2  */
+    left: calc(50vh - 35vh);
+    width: 70vh;
+    height: 70vh;
+  }
+} 
