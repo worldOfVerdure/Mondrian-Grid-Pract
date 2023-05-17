@@ -1,16 +1,3 @@
-/* 
-    Write your CSS here 
-    Gap Colour: #000
-    White: #F0F1EC
-    Red: #E72F24
-    Black: #232629
-    Blue: #004592
-    Yellow: #F9D01E
-
-    For dimensions, see dimensions.png image.
-    HINT: Remember you can't change the properties of grid lines.
-    But grid lines are transparent!
-    */
 html {
   font-size: 62.5%;
 }
@@ -27,8 +14,57 @@ body {
   width: 70vw;
   height: 70vw;
   background-color: #000;
+  /* Graph properties */
   display: grid;
-  gap: .9rem;
+  gap: calc(100% * calc(9 / 748));
+  grid-template-columns: calc(100% * calc(320 / 748)) calc(100% * calc(198 / 748)) calc(100% * calc(153 / 748)) calc(100% * calc(50 / 748));
+  grid-template-rows: calc(100% * calc(414 / 748)) calc(100% * calc(130 / 748)) calc(100% * calc(155 / 748)) calc(100% * calc(22 / 748));
+}
+
+:nth-child(1 of .container > div) {
+  background-color: #E72F24;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+:nth-child(2 of .container > div) {
+  background-color: #F0F1EC;
+  grid-area: 1 / 2 / 2 / 5;
+}
+
+:nth-child(3 of .container > div) {
+  background-color: #F0F1EC;
+  grid-area: 2 / 1 / 4 / 2;
+}
+
+:nth-child(4 of .container > div) {
+  background-color: #F0F1EC;
+  grid-area: 2 / 2 / 4 / 4;
+}
+
+:nth-child(5 of .container > div) {
+  background-color: #004592;
+  border-bottom: 10px solid #000;
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+:nth-child(6 of .container > div) {
+  background-color: #F9D01E;
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+:nth-child(7 of .container > div) {
+  background-color: #232629;
+  grid-area: 4 / 3 / 5 / 4;
+}
+
+:nth-child(8 of .container > div) {
+  background-color: #F0F1EC;
+  grid-area: 3 / 4 / 5 / 5;
+}
+
+:nth-child(9 of .container > div) {
+  background-color: #F0F1EC;
+  grid-area: 4 / 1 / 5 / 2;
 }
 
 @media screen and (orientation: landscape) {
