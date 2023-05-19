@@ -3,55 +3,75 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
   margin: 0;
-  min-height: 100vh;
+  height: 90vh;
 }
 
-header {
-  height: 80vh;
-  max-width: 100vw;
-  background: linear-gradient(to top, #ff9653 40%, #a3b5d1);
+.container {
   position: relative;
-  overflow: hidden;
+  top: calc(50vh - 35vw); /* The 35vw part is width / 2  */
+  left: 15vw;
+  width: 70vw;
+  height: 70vw;
+  background-color: #000;
+  /* Graph properties */
+  display: grid;
+  gap: calc(100% * calc(9 / 748));
+  grid-template-columns: calc(100% * calc(320 / 748)) calc(100% * calc(198 / 748)) calc(100% * calc(153 / 748)) calc(100% * calc(50 / 748));
+  grid-template-rows: calc(100% * calc(414 / 748)) calc(100% * calc(130 / 748)) calc(100% * calc(155 / 748)) calc(100% * calc(22 / 748));
 }
 
-/* SVG text*/
-:nth-child(1 of header > img) {
-  position: absolute;
-  top: calc(12% - 5vw);
-  width: calc(40rem + 30vw);
+:nth-child(1 of .container > div) {
+  background-color: #E72F24;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
-/* Moon */
-:nth-child(2 of header > img) {
-  position: absolute;
-  top: calc(35% - 15vw);
-  right: 10%;
+:nth-child(2 of .container > div) {
+  background-color: #F0F1EC;
+  grid-area: 1 / 2 / 2 / 5;
 }
 
-/* Moon reflection */
-:nth-child(3 of header > img) {
-  display: none;
+:nth-child(3 of .container > div) {
+  background-color: #F0F1EC;
+  grid-area: 2 / 1 / 4 / 2;
 }
 
-/* Mountain */
-:nth-child(4 of header > img) {
-  position: absolute;
-  bottom: 0px;
-  min-width: 100%;
-  width: 125%;
-  max-height: 75%;
+:nth-child(4 of .container > div) {
+  background-color: #F0F1EC;
+  grid-area: 2 / 2 / 4 / 4;
 }
 
-@media screen and (min-width: 800px) { /* Why does 72.0rem not work as intended? */
-  :nth-child(3 of header > img) {
-    display: inline-block;
-    position: absolute;
-    bottom: calc(8% - 5.5vw);
-    right: 10%;
-    z-index: 1;
-    transform: scale(1, -1);
-    opacity: .6;
+:nth-child(5 of .container > div) {
+  background-color: #004592;
+  border-bottom: 10px solid #000;
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+:nth-child(6 of .container > div) {
+  background-color: #F9D01E;
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+:nth-child(7 of .container > div) {
+  background-color: #232629;
+  grid-area: 4 / 3 / 5 / 4;
+}
+
+:nth-child(8 of .container > div) {
+  background-color: #F0F1EC;
+  grid-area: 3 / 4 / 5 / 5;
+}
+
+:nth-child(9 of .container > div) {
+  background-color: #F0F1EC;
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+@media screen and (orientation: landscape) {
+  .container {
+    top: 15vh;
+    left: calc(50vw - 35vh); /* The 35vh part is height / 2  */
+    width: 70vh;
+    height: 70vh;
   }
-}
+} 
